@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B1788211BE00083004CD984 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B17881F1BE00083004CD984 /* Main.storyboard */; };
+		9B1788231BE00083004CD984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B1788221BE00083004CD984 /* Assets.xcassets */; };
+		9B1788261BE00083004CD984 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B1788241BE00083004CD984 /* LaunchScreen.storyboard */; };
+		9B17882E1BE000B0004CD984 /* SwiftlyFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17882D1BE000B0004CD984 /* SwiftlyFunc.swift */; };
+		9B1788431BE15A1B004CD984 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1788421BE15A1B004CD984 /* Main.swift */; };
+		9B1788451BE180B1004CD984 /* chalk.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1788441BE180B1004CD984 /* chalk.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9B1788181BE00083004CD984 /* SwiftlyFunc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftlyFunc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B1788201BE00083004CD984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9B1788221BE00083004CD984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B1788251BE00083004CD984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B1788271BE00083004CD984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B17882D1BE000B0004CD984 /* SwiftlyFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftlyFunc.swift; sourceTree = "<group>"; };
+		9B1788421BE15A1B004CD984 /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		9B1788441BE180B1004CD984 /* chalk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chalk.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B1788151BE00083004CD984 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B17880F1BE00083004CD984 = {
+			isa = PBXGroup;
+			children = (
+				9B17881A1BE00083004CD984 /* SwiftlyFunc */,
+				9B1788191BE00083004CD984 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B1788191BE00083004CD984 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B1788181BE00083004CD984 /* SwiftlyFunc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B17881A1BE00083004CD984 /* SwiftlyFunc */ = {
+			isa = PBXGroup;
+			children = (
+				9B1788421BE15A1B004CD984 /* Main.swift */,
+				9B17881F1BE00083004CD984 /* Main.storyboard */,
+				9B17882D1BE000B0004CD984 /* SwiftlyFunc.swift */,
+				9B1788221BE00083004CD984 /* Assets.xcassets */,
+				9B1788241BE00083004CD984 /* LaunchScreen.storyboard */,
+				9B1788271BE00083004CD984 /* Info.plist */,
+				9B1788441BE180B1004CD984 /* chalk.png */,
+			);
+			path = SwiftlyFunc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B1788171BE00083004CD984 /* SwiftlyFunc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B17882A1BE00083004CD984 /* Build configuration list for PBXNativeTarget "SwiftlyFunc" */;
+			buildPhases = (
+				9B1788141BE00083004CD984 /* Sources */,
+				9B1788151BE00083004CD984 /* Frameworks */,
+				9B1788161BE00083004CD984 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftlyFunc;
+			productName = SwiftlyFunc;
+			productReference = 9B1788181BE00083004CD984 /* SwiftlyFunc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B1788101BE00083004CD984 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Lee Barney";
+				TargetAttributes = {
+					9B1788171BE00083004CD984 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 9B1788131BE00083004CD984 /* Build configuration list for PBXProject "SwiftlyFunc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B17880F1BE00083004CD984;
+			productRefGroup = 9B1788191BE00083004CD984 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B1788171BE00083004CD984 /* SwiftlyFunc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B1788161BE00083004CD984 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B1788261BE00083004CD984 /* LaunchScreen.storyboard in Resources */,
+				9B1788231BE00083004CD984 /* Assets.xcassets in Resources */,
+				9B1788211BE00083004CD984 /* Main.storyboard in Resources */,
+				9B1788451BE180B1004CD984 /* chalk.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B1788141BE00083004CD984 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B17882E1BE000B0004CD984 /* SwiftlyFunc.swift in Sources */,
+				9B1788431BE15A1B004CD984 /* Main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9B17881F1BE00083004CD984 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B1788201BE00083004CD984 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9B1788241BE00083004CD984 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B1788251BE00083004CD984 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B1788281BE00083004CD984 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9B1788291BE00083004CD984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B17882B1BE00083004CD984 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SwiftlyFunc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.barney.lee.SwiftlyFunc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9B17882C1BE00083004CD984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SwiftlyFunc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.barney.lee.SwiftlyFunc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B1788131BE00083004CD984 /* Build configuration list for PBXProject "SwiftlyFunc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B1788281BE00083004CD984 /* Debug */,
+				9B1788291BE00083004CD984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B17882A1BE00083004CD984 /* Build configuration list for PBXNativeTarget "SwiftlyFunc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B17882B1BE00083004CD984 /* Debug */,
+				9B17882C1BE00083004CD984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B1788101BE00083004CD984 /* Project object */;
+}
