@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="theChalk" image="chalk.png" translatesAutoresizingMaskIntoConstraints="NO" id="84D-Dh-Xf8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" restorationIdentifier="theChalk" image="chalk.png" translatesAutoresizingMaskIntoConstraints="NO" id="84D-Dh-Xf8">
                                 <rect key="frame" x="166" y="302" width="240" height="128"/>
                                 <animations/>
                                 <gestureRecognizers/>
@@ -44,7 +44,7 @@
                                     <outletCollection property="gestureRecognizers" destination="Cwo-uE-Rce" appends="YES" id="PV8-h8-d4G"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="theButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOr-DZ-7RK">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" restorationIdentifier="theButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOr-DZ-7RK">
                                 <rect key="frame" x="131" y="129" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Button"/>

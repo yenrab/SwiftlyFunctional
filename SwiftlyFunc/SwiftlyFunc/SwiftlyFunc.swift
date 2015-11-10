@@ -129,7 +129,7 @@ extension UIGestureRecognizer {
 typealias appClosure = () -> Void
 private var applicationEventToHandlerDictionary = [AppEventType:appClosure]()
 
-typealias touchClosure = (UIControl,UIEvent) -> UIControl
+typealias touchClosure = (UIEvent) -> Void
 private var touchEventToHandlerDictionary = [UIControl:[UInt:touchClosure]]()
 
 
@@ -141,7 +141,7 @@ func addApplicationEventHandler(theApplication:UIApplication,theEventType:AppEve
     return theApplication
 }
 
-func addTouchEventHandler(theControl:UIControl,touchEventType:UIControlEvents,handler:((UIControl, UIEvent) -> UIControl)) -> UIControl{
+func addTouchEventHandler(theControl:UIControl,touchEventType:UIControlEvents,handler:(UIEvent) -> Void) -> UIControl{
     theControl.addTarget(UIApplication.sharedApplication().delegate!, action: "doEventHandler:forEvent:", forControlEvents: touchEventType)
     var currentHandlerDictionary = touchEventToHandlerDictionary[theControl]
     if currentHandlerDictionary == nil{
@@ -393,13 +393,10 @@ class Eventor:UIViewController, UIApplicationDelegate{
             if let senderView = sender as? UIView {
                 type = touchEventToUIControlEvents(senderView,theEvent: event)
             }
-            else if let senderRecognizer = sender as? UIGestureRecognizer{
-                //type =
-            }
             guard let handler = mappedEvents[type.rawValue] else{
                 return
             }
-            handler(control, event)
+            handler(event)
 
         }
     }

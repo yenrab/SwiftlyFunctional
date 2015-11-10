@@ -18,23 +18,21 @@ func main(application:UIApplication, userView:UIView, launchReasons:[NSObject:An
     }
     
     //Example: creating handlers for touch events
-    let theButton = getViewByUniqueID(userView, anID: "theButton") as! UIButton
+    let aButton = getViewByUniqueID(userView, anID: "theButton") as! UIButton
     
-    addTouchEventHandler(theButton, touchEventType:UIControlEvents.TouchDown){(touchedButton:UIControl,theEvent:UIEvent) -> UIControl in
-        print("view: \(userView.isFirstResponder())")
-        print("in the down handler!!")
-        return touchedButton
+    addTouchEventHandler(aButton, touchEventType:UIControlEvents.TouchDown){(theEvent:UIEvent) -> Void in
+        print("\(aButton.uniqueID!) using the down handler at \(theEvent.allTouches()!.first!.locationInView(aButton))")
     }
-    addTouchEventHandler(theButton, touchEventType:UIControlEvents.TouchUpInside){(touchedButton:UIControl,theEvent:UIEvent) -> UIControl in
+    addTouchEventHandler(aButton, touchEventType:UIControlEvents.TouchUpInside){(theEvent:UIEvent) -> Void in
         
-        print("in the end inside handler!!")
-        return touchedButton
+        print("\(aButton.uniqueID!) using the end inside handler at \(theEvent.allTouches()!.first!.locationInView(aButton))")
+
     }
     
-    addTouchEventHandler(theButton, touchEventType:UIControlEvents.TouchUpOutside){(touchedButton:UIControl,theEvent:UIEvent) -> UIControl in
+    addTouchEventHandler(aButton, touchEventType:UIControlEvents.TouchUpOutside){(theEvent:UIEvent) -> Void in
         
-        print("in the end outside handler!!")
-        return touchedButton
+        print("\(aButton.uniqueID!) using the end outside handler at \(theEvent.allTouches()!.first!.locationInView(userView))")
+
     }
     
     //Example: creating handlers for gesture events
@@ -43,7 +41,7 @@ func main(application:UIApplication, userView:UIView, launchReasons:[NSObject:An
     
     if let theRecognizer = getGestureRecognizerByUniqueID(theImage!, anID: "imageTap"){
         addTouchEventHandler(theRecognizer){
-            print("tapped")
+            print("\(theRecognizer.uniqueID!) activated")
         }
     }
    
