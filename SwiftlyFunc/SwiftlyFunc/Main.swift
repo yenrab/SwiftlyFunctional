@@ -41,7 +41,7 @@ func main(application:UIApplication, userView:UIView, launchReasons:[NSObject:An
     
     if let theRecognizer = getGestureRecognizerByUniqueID(theImage!, anID: "imageTap"){
         addTouchEventHandler(theRecognizer){
-            print("\(theRecognizer.uniqueID!) activated")
+            print("\(theRecognizer.uniqueID!) activated at \(theRecognizer.locationInView(theImage))")
         }
     }
    
