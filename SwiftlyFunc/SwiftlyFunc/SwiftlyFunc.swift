@@ -45,15 +45,14 @@ enum GestureEventType:String{
 extension UIView {
     private struct AssociatedKeys {
         static var uniqueID:String? = nil
-        static var dragEntered:Bool? = false
-        static var dragExited:Bool? = false
+        static var dragEntered:Bool = false
+        static var dragExited:Bool = false
     }
     
     var uniqueID: String? {
         get {
             return objc_getAssociatedObject(self, &AssociatedKeys.uniqueID) as? String
         }
-        
         set {
             if let newValue = newValue {
                 objc_setAssociatedObject(
@@ -66,37 +65,23 @@ extension UIView {
         }
     }
     
-    var dragEntered: Bool? {
+    var dragEntered: Bool {
         get {
-            return (objc_getAssociatedObject(self, &AssociatedKeys.dragEntered) as? Bool)!
+            return AssociatedKeys.dragEntered
         }
         
         set {
-            if let newValue = newValue {
-                objc_setAssociatedObject(
-                    self,
-                    &AssociatedKeys.dragEntered,
-                    newValue as Bool,
-                    .OBJC_ASSOCIATION_RETAIN_NONATOMIC
-                )
-            }
+                AssociatedKeys.dragEntered = newValue
         }
     }
     
-    var dragExited: Bool? {
+    var dragExited: Bool {
         get {
-            return (objc_getAssociatedObject(self, &AssociatedKeys.dragExited) as? Bool)!
+            return AssociatedKeys.dragExited
         }
         
         set {
-            if let newValue = newValue {
-                objc_setAssociatedObject(
-                    self,
-                    &AssociatedKeys.dragExited,
-                    newValue as Bool,
-                    .OBJC_ASSOCIATION_RETAIN_NONATOMIC
-                )
-            }
+                AssociatedKeys.dragExited = newValue
         }
     }
 }
@@ -169,6 +154,7 @@ func addTouchEventHandler(theGestureRecognizer:UIGestureRecognizer, handler:() -
 }
 
 func getViewByUniqueID(containingView:UIView, anID:String) ->UIView?{
+    
     let filteredSubviews = containingView.subviews.filter(){$0.uniqueID == anID}
     if filteredSubviews.count > 0{
         return filteredSubviews[0]
@@ -245,7 +231,7 @@ private func touchEventToUIControlEvents(theTarget:UIView,theEvent:UIEvent) ->UI
         //moved into, out of, within, or without
         let moveLocation = theEvent.allTouches()?.first?.locationInView(nil)
         if theTarget.frame.contains(moveLocation!){
-            if theTarget.dragEntered!{
+            if theTarget.dragEntered{
                 theControlEventType = UIControlEvents.TouchDragInside
             }
             else{
@@ -254,7 +240,7 @@ private func touchEventToUIControlEvents(theTarget:UIView,theEvent:UIEvent) ->UI
             }
         }
         else{
-            if theTarget.dragExited!{
+            if theTarget.dragExited{
                 theControlEventType = UIControlEvents.TouchDragOutside
             }
             else{
