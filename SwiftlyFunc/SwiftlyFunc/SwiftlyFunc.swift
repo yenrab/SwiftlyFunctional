@@ -43,7 +43,7 @@ enum GestureEventType:String{
 }
 
 extension UIView {
-    private struct AssociatedKeys {
+    private struct SwiftlyFuncCustomProperties {
         static var uniqueID:String? = nil
         static var dragEntered:Bool = false
         static var dragExited:Bool = false
@@ -51,14 +51,14 @@ extension UIView {
     
     var uniqueID: String? {
         get {
-            return objc_getAssociatedObject(self, &AssociatedKeys.uniqueID) as? String
+            return objc_getAssociatedObject(self, &SwiftlyFuncCustomProperties.uniqueID) as? String
         }
         set {
-            if let newValue = newValue {
+            if let unwrappedValue = newValue {
                 objc_setAssociatedObject(
                     self,
-                    &AssociatedKeys.uniqueID,
-                    newValue as NSString?,
+                    &SwiftlyFuncCustomProperties.uniqueID,
+                    unwrappedValue as NSString?,
                     .OBJC_ASSOCIATION_RETAIN_NONATOMIC
                 )
             }
@@ -67,42 +67,52 @@ extension UIView {
     
     var dragEntered: Bool {
         get {
-            return AssociatedKeys.dragEntered
+            return objc_getAssociatedObject(self, &SwiftlyFuncCustomProperties.dragEntered) as! Bool
         }
         
         set {
-                AssociatedKeys.dragEntered = newValue
+            objc_setAssociatedObject(
+                self,
+                &SwiftlyFuncCustomProperties.dragEntered,
+                newValue as ObjCBool.BooleanLiteralType,
+                .OBJC_ASSOCIATION_RETAIN_NONATOMIC
+            )
         }
     }
     
     var dragExited: Bool {
         get {
-            return AssociatedKeys.dragExited
+            return objc_getAssociatedObject(self, &SwiftlyFuncCustomProperties.dragExited) as! Bool
         }
         
         set {
-                AssociatedKeys.dragExited = newValue
+            objc_setAssociatedObject(
+                self,
+                &SwiftlyFuncCustomProperties.dragExited,
+                newValue as ObjCBool.BooleanLiteralType,
+                .OBJC_ASSOCIATION_RETAIN_NONATOMIC
+            )
         }
     }
 }
 
 
 extension UIGestureRecognizer {
-    private struct AssociatedKeys {
+    private struct SwiftlyFuncCustomProperties {
         static var uniqueID:String? = nil
     }
     
     var uniqueID: String? {
         get {
-            return objc_getAssociatedObject(self, &AssociatedKeys.uniqueID) as? String
+            return objc_getAssociatedObject(self, &SwiftlyFuncCustomProperties.uniqueID) as? String
         }
         
         set {
-            if let newValue = newValue {
+            if let unwrappedValue = newValue {
                 objc_setAssociatedObject(
                     self,
-                    &AssociatedKeys.uniqueID,
-                    newValue as NSString?,
+                    &SwiftlyFuncCustomProperties.uniqueID,
+                    unwrappedValue as NSString?,
                     .OBJC_ASSOCIATION_RETAIN_NONATOMIC
                 )
             }
